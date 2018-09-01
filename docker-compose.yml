@@ -1,0 +1,15 @@
+version: '3'
+services:
+  cmk_mva:
+    build: "nlmacamp/check_mk"
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - "5000"
+    volumes:
+      - /opt/omd/sites/mva:/opt/omd/sites/mva
+    enviroment:
+      - 
+  nginx:
+    build: "nginx"
+    
